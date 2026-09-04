@@ -1,0 +1,19 @@
+# Customers - customer <customer_name> <customer_type> <customer_distance> <max_orders>
+
+customer Dan civilian 1 2              # Example of a soldier customer called Dan, distance=1, maxOrders=2
+customer Boten soldier 5 1              # Example of a soldier customer called Boten, distance=5, maxOrders=1
+customer Ron civilian 2 1               # Example of a civilian customer called Ron, distance=2, maxOrders=1
+
+# Volunteers - volunteer <volunteer_name> <volunteer_role> <volunteer_coolDown>/<volunteer_maxDistance> <distance_per_step>(for drivers only) <volunteer_maxOrders>(optional)
+
+volunteer Rami limited_collector 1 1    # Example of a limited collector, coolDown=1, maxOrders=1
+volunteer Tamar collector 2             # Example of a collector, coolDown=2, maxOrders is unlimited
+volunteer Ron limited_collector 3 2     # Example of a limited collector, coolDown=3, maxOrders=2
+volunteer Tal driver 7 4                # Example of a driver, maxDistance=7, distance_per_step=4, maxOrders is unlimited
+volunteer Din limited_driver 3 2 3      # Example of a limited driver, maxDistance=3, distance_per_step=2, maxOrders=3
+
+# Extra customers for manual tests
+
+customer Yael soldier 3 2               # Can be delivered by either driver
+customer Dana civilian 8 2              # Too far for all configured drivers, so delivery should stay waiting
+customer Adam soldier 6 1               # Can be delivered only by Tal, the regular driver

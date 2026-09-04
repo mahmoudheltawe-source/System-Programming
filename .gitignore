@@ -1,0 +1,18 @@
+# C++ build output
+bin/
+*.o
+
+# Java/Maven build output
+target/
+*.class
+
+# Runtime/editor/system files
+logs/
+*.log
+*.log.lck
+*.iml
+.DS_Store
+
+# IDE folders
+.idea/
+.vscode/
